@@ -1,0 +1,25 @@
+#dataSource 설정
+spring:
+  datasource:
+    url: jdbc:mariadb://52.79.229.43:3306/apmdb
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: developer
+    password: 1234
+  jpa:
+    open-in-view: false
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#view 설정
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  thymeleaf:
+    cache: false
+    enabled: false
+    
+#port 설정
+server:
+  port: 8070
